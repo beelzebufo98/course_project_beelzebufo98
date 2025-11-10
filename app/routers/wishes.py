@@ -18,7 +18,7 @@ def create_wish(
     wish_in: WishCreate,
     db: Session = Depends(get_db),
 ):
-    wish = Wish(**wish_in.dict(), owner_id=1)
+    wish = Wish(**wish_in.model_dump())
 
     db.add(wish)
     try:
@@ -26,7 +26,12 @@ def create_wish(
         db.refresh(wish)
     except IntegrityError as e:
         db.rollback()
-        raise ValidationError(f"Ошибка при создании пожелания: {e}")
+        msg = "Ошибка при создании пожелания"
+        if "foreign key constraint" in str(e).lower():
+            msg = "Указан несуществующий пользователь или категория"
+        elif "unique" in str(e).lower():
+            msg = "Нарушено уникальное ограничение данных"
+        raise ValidationError(msg)
     return wish
 
 
@@ -56,17 +61,21 @@ def update_wish(
     if not wish:
         raise NotFoundError("Пожелание не найдено")
 
-    for key, value in wish_in.dict(exclude_unset=True).items():
+    for key, value in wish_in.model_dump(exclude_unset=True).items():
         setattr(wish, key, value)
 
     db.add(wish)
     try:
         db.commit()
         db.refresh(wish)
-    except IntegrityError:
+    except IntegrityError as e:
         db.rollback()
-        raise ValidationError("Ошибка при обновлении пожелания")
-
+        msg = "Ошибка при обновлении пожелания"
+        if "foreign key constraint" in str(e).lower():
+            msg = "Указан несуществующий пользователь или категория"
+        elif "unique" in str(e).lower():
+            msg = "Нарушено уникальное ограничение данных"
+        raise ValidationError(msg)
     return wish
 
 

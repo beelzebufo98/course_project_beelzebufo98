@@ -1,10 +1,14 @@
 from decimal import Decimal, InvalidOperation
 from typing import Optional
 
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, ConfigDict, Field, field_serializer, field_validator
 
 
-class UserCreate(BaseModel):
+class StrictModel(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class UserCreate(StrictModel):
     username: str = Field(min_length=1, max_length=100)
     first_name: str = Field(min_length=1, max_length=50)
     last_name: str = Field(min_length=1, max_length=50)
@@ -20,7 +24,7 @@ class UserOut(BaseModel):
         from_attributes = True
 
 
-class CategoryCreate(BaseModel):
+class CategoryCreate(StrictModel):
     name: str = Field(min_length=1, max_length=100)
 
 
@@ -32,7 +36,7 @@ class CategoryOut(BaseModel):
         from_attributes = True
 
 
-class WishBase(BaseModel):
+class WishBase(StrictModel):
     title: str = Field(min_length=1, max_length=120)
     link: Optional[str] = Field(default=None, max_length=500)
     notes: Optional[str] = Field(default=None, max_length=2000)
@@ -41,35 +45,49 @@ class WishBase(BaseModel):
 
 
 class WishCreate(WishBase):
-    price_estimate: float = Field(ge=0)
+    owner_id: int
+    price_estimate: Decimal = Field(ge=Decimal("0"), max_digits=10, decimal_places=2)
 
-    @validator("price_estimate", pre=True)
+    @field_validator("price_estimate", mode="before")
+    @classmethod
     def normalize_price(cls, v):
-        return Decimal(v).quantize(Decimal("0.01"))
+        if v is None:
+            return Decimal("0.00")
+        try:
+            return Decimal(v).quantize(Decimal("0.01"))
+        except (InvalidOperation, ValueError):
+            raise ValueError("price_estimate must be a valid non-negative number")
 
 
 class WishUpdate(WishBase):
-    price_estimate: Optional[str] = None
+    price_estimate: Optional[Decimal] = Field(
+        default=None, ge=Decimal("0"), max_digits=10, decimal_places=2
+    )
 
-    @validator("price_estimate", pre=True)
+    @field_validator("price_estimate", mode="before")
+    @classmethod
     def normalize_price(cls, v):
-        if v is None or v == "":
+        if v in (None, ""):
             return None
         try:
-            return str(Decimal(v).quantize(Decimal("0.01")))
+            return Decimal(v).quantize(Decimal("0.01"))
         except (InvalidOperation, ValueError):
-            raise ValueError("price_estimate must be a valid number ≥ 0")
+            raise ValueError("price_estimate must be a valid non-negative number")
 
 
 class WishOut(BaseModel):
     id: int
     title: str
     link: Optional[str]
-    price_estimate: float
+    price_estimate: Decimal
     notes: Optional[str]
     is_fulfilled: bool
     category: Optional[CategoryOut]
     owner_id: int
+
+    @field_serializer("price_estimate")
+    def _ser_price(self, v: Decimal):
+        return float(v.quantize(Decimal("0.01")))
 
     class Config:
         from_attributes = True

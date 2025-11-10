@@ -26,6 +26,7 @@ def test_wish_create_rate_limit(client, test_user):
         "link": "https://example.com",
         "price_estimate": 42.0,
         "notes": "rate limit test",
+        "owner_id": test_user.id,
     }
 
     for i in range(10):
@@ -54,6 +55,7 @@ def sample_wish(client, test_user):
             "link": "https://example.com",
             "price_estimate": 1.0,
             "notes": "test",
+            "owner_id": test_user.id,
         },
     )
     assert resp.status_code == 201, resp.text

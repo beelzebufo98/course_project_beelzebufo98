@@ -14,7 +14,7 @@ def category(client):
 
 
 @pytest.fixture
-def wish_payload(category):
+def wish_payload(category, test_user):
     return {
         "title": f"Wish {uuid.uuid4().hex[:6]}",
         "link": "https://example.com",
@@ -22,6 +22,7 @@ def wish_payload(category):
         "notes": "test notes",
         "is_fulfilled": False,
         "category_id": category["id"],
+        "owner_id": test_user.id,
     }
 
 
