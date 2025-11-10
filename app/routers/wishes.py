@@ -18,7 +18,7 @@ def create_wish(
     wish_in: WishCreate,
     db: Session = Depends(get_db),
 ):
-    wish = Wish(**wish_in.dict(), owner_id=1)
+    wish = Wish(**wish_in.model_dump())
 
     db.add(wish)
     try:
@@ -56,7 +56,7 @@ def update_wish(
     if not wish:
         raise NotFoundError("Пожелание не найдено")
 
-    for key, value in wish_in.dict(exclude_unset=True).items():
+    for key, value in wish_in.model_dump(exclude_unset=True).items():
         setattr(wish, key, value)
 
     db.add(wish)
