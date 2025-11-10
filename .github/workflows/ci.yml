@@ -73,5 +73,11 @@ jobs:
       - name: Run tests
         run: pytest -v
 
+      - name: Run tests and collect coverage
+        run: pytest --cov=app --cov-report=xml
+
+      - name: Enforce coverage threshold
+        run: coverage report --fail-under=70
+
       - name: Pre-commit (all files)
         run: pre-commit run --all-files
