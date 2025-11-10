@@ -1,3 +1,5 @@
+import logging
+
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from slowapi.errors import RateLimitExceeded
@@ -5,14 +7,17 @@ from slowapi.errors import RateLimitExceeded
 from app.errors import ApiError
 from app.init_db import init_db
 from app.limiter import limiter
+from app.logging_filters import SecretMaskingFilter
 from app.routers import internal_categories, users, wishes
 
+logging.getLogger().addFilter(SecretMaskingFilter())
 app = FastAPI(title="SecDev Course App", version="0.1.0")
 app.state.limiter = limiter
 
 
 @app.exception_handler(ApiError)
 async def api_error_handler(request: Request, exc: ApiError):
+    logging.warning(f"[{exc.correlation_id}] {exc.code}: {exc.message}")
     return exc.to_json()
 
 

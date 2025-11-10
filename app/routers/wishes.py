@@ -26,7 +26,12 @@ def create_wish(
         db.refresh(wish)
     except IntegrityError as e:
         db.rollback()
-        raise ValidationError(f"Ошибка при создании пожелания: {e}")
+        msg = "Ошибка при создании пожелания"
+        if "foreign key constraint" in str(e).lower():
+            msg = "Указан несуществующий пользователь или категория"
+        elif "unique" in str(e).lower():
+            msg = "Нарушено уникальное ограничение данных"
+        raise ValidationError(msg)
     return wish
 
 
@@ -63,10 +68,14 @@ def update_wish(
     try:
         db.commit()
         db.refresh(wish)
-    except IntegrityError:
+    except IntegrityError as e:
         db.rollback()
-        raise ValidationError("Ошибка при обновлении пожелания")
-
+        msg = "Ошибка при обновлении пожелания"
+        if "foreign key constraint" in str(e).lower():
+            msg = "Указан несуществующий пользователь или категория"
+        elif "unique" in str(e).lower():
+            msg = "Нарушено уникальное ограничение данных"
+        raise ValidationError(msg)
     return wish
 
 
