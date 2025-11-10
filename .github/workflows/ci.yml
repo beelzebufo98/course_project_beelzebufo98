@@ -77,7 +77,7 @@ jobs:
         run: pytest --cov=app --cov-report=xml
 
       - name: Enforce coverage threshold
-        run: coverage report --fail-under=70
+        run: coverage report --fail-under=80
 
       - name: Pre-commit (all files)
         run: pre-commit run --all-files
