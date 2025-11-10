@@ -62,6 +62,10 @@ jobs:
           black --check .
           isort --check-only .
 
+      - name: Static security scan (Bandit)
+        run: |
+          bandit -r app -ll -q
+
       - name: Wait for PostgreSQL
         run: |
           echo "Waiting for PostgreSQL to be ready..."
