@@ -57,7 +57,6 @@ jobs:
             --ignore-vuln GHSA-2c2j-9gv5-cj73 \
             --strict
 
-
       - name: Lint & Format
         run: |
           ruff check --output-format=github .
@@ -71,7 +70,6 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
-          config: .hadolint.yml
 
       - name: Build container image
         run: docker build -t secdev-app:ci .
