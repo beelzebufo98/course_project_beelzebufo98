@@ -47,7 +47,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt -r requirements-dev.txt
-          pip install pip-audit bandit hadolint-cli trivy
+          pip install pip-audit bandit trivy
 
       - name: Security audit (pip-audit)
         run: pip-audit \
@@ -66,13 +66,22 @@ jobs:
         run: bandit -r app -ll -q
 
       - name: Dockerfile lint (Hadolint)
-        run: hadolint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
+          config: .hadolint.yml
 
       - name: Build container image
         run: docker build -t secdev-app:ci .
 
       - name: Image vulnerability scan (Trivy)
-        run: trivy image --severity HIGH,CRITICAL --no-progress secdev-app:ci
+        run: trivy image --severity HIGH,CRITICAL --no-progress --format json --output trivy-report.json secdev-app:ci
+
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report
+          path: trivy-report.json
 
       - name: Wait for PostgreSQL
         run: |
