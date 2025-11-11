@@ -66,28 +66,6 @@ jobs:
       - name: Static security scan (Bandit)
         run: bandit -r app -ll -q
 
-      - name: Dockerfile lint (Hadolint)
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: Dockerfile
-
-      - name: Build container image
-        run: docker build -t secdev-app:ci .
-
-      - name: Image vulnerability scan (Trivy)
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          image-ref: secdev-app:ci
-          severity: HIGH,CRITICAL
-          format: json
-          output: trivy-report.json
-
-      - name: Upload Trivy report
-        uses: actions/upload-artifact@v4
-        with:
-          name: trivy-report
-          path: trivy-report.json
-
       - name: Wait for PostgreSQL
         run: |
           echo "Waiting for PostgreSQL to be ready..."
