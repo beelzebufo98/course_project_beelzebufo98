@@ -50,11 +50,13 @@ jobs:
           pip install pip-audit bandit
 
       - name: Security audit (pip-audit)
-        run: pip-audit \
-          --ignore-vuln GHSA-4xh5-x5gv-qwph \
-          --ignore-vuln GHSA-f96h-pmfr-66vw \
-          --ignore-vuln GHSA-2c2j-9gv5-cj73 \
-          --strict
+        run: |
+          pip-audit \
+            --ignore-vuln GHSA-4xh5-x5gv-qwph \
+            --ignore-vuln GHSA-f96h-pmfr-66vw \
+            --ignore-vuln GHSA-2c2j-9gv5-cj73 \
+            --strict
+
 
       - name: Lint & Format
         run: |
@@ -74,7 +76,6 @@ jobs:
       - name: Build container image
         run: docker build -t secdev-app:ci .
 
-      # ✅ Trivy через официальный GitHub Action
       - name: Image vulnerability scan (Trivy)
         uses: aquasecurity/trivy-action@0.28.0
         with:
