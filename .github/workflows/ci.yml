@@ -47,7 +47,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt -r requirements-dev.txt
-          pip install pip-audit bandit trivy
+          pip install pip-audit bandit
 
       - name: Security audit (pip-audit)
         run: pip-audit \
@@ -74,8 +74,14 @@ jobs:
       - name: Build container image
         run: docker build -t secdev-app:ci .
 
+      # ✅ Trivy через официальный GitHub Action
       - name: Image vulnerability scan (Trivy)
-        run: trivy image --severity HIGH,CRITICAL --no-progress --format json --output trivy-report.json secdev-app:ci
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: secdev-app:ci
+          severity: HIGH,CRITICAL
+          format: json
+          output: trivy-report.json
 
       - name: Upload Trivy report
         uses: actions/upload-artifact@v4
