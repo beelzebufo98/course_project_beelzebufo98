@@ -47,14 +47,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt -r requirements-dev.txt
-          pip install pip-audit
+          pip install pip-audit bandit
 
       - name: Security audit (pip-audit)
-        run: pip-audit
-          --ignore-vuln GHSA-4xh5-x5gv-qwph
-          --ignore-vuln GHSA-f96h-pmfr-66vw
-          --ignore-vuln GHSA-2c2j-9gv5-cj73
-          --strict
+        run: |
+          pip-audit \
+            --ignore-vuln GHSA-4xh5-x5gv-qwph \
+            --ignore-vuln GHSA-f96h-pmfr-66vw \
+            --ignore-vuln GHSA-2c2j-9gv5-cj73 \
+            --strict
 
       - name: Lint & Format
         run: |
@@ -63,8 +64,7 @@ jobs:
           isort --check-only .
 
       - name: Static security scan (Bandit)
-        run: |
-          bandit -r app -ll -q
+        run: bandit -r app -ll -q
 
       - name: Wait for PostgreSQL
         run: |

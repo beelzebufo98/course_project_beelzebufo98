@@ -1,8 +1,41 @@
 services:
+  db:
+    image: postgres:15
+    restart: always
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
   app:
-    build: .
+    build:
+      context: .
+      target: runtime
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
     ports:
       - "8000:8000"
-    environment:
-      - PYTHONUNBUFFERED=1
-    profiles: ["dev"]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+
+volumes:
+  pg_data:

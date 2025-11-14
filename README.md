@@ -31,8 +31,8 @@ Badge добавится автоматически после загрузки 
 
 ## Контейнеры
 ```bash
-docker build -t secdev-app .
-docker run --rm -p 8000:8000 secdev-app
+docker build -t secdev-app:latest .
+docker run -p 8000:8000  -e DATABASE_URL={connection string from your db} secdev-app:latest
 # или
 docker compose up --build
 ```
