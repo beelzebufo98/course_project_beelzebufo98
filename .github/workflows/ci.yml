@@ -83,5 +83,29 @@ jobs:
       - name: Enforce coverage threshold
         run: coverage report --fail-under=80
 
+      - name: Build Docker image
+        run: docker build -t secdev-course-app:ci .
+
+      - name: Dockerfile lint (hadolint)
+        run: |
+          docker run --rm -i hadolint/hadolint < Dockerfile
+
+      - name: Container image scan (Trivy)
+        run: |
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v $PWD:/work \
+            aquasec/trivy:latest image \
+            --exit-code 1 \
+            --severity CRITICAL,HIGH \
+            --format table \
+            secdev-course-app:ci | tee trivy-report.txt
+
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report
+          path: trivy-report.txt
+
       - name: Pre-commit (all files)
         run: pre-commit run --all-files
