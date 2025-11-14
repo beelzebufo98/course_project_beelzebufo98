@@ -36,7 +36,6 @@ services:
     tmpfs:
       - /tmp
     restart: unless-stopped
-    profiles: ["dev"]
 
 volumes:
   pg_data:
