@@ -1,0 +1,12 @@
+waivers:
+  - id: "GHSA-f96h-pmfr-66vw"
+    package: "starlette"
+    version: "0.38.2"
+    severity: "High"
+    reason: >
+      Уязвимость относится к Starlette <0.39.0, но FastAPI 0.115.0 жёстко
+      требует starlette<0.39.0. Обновление до безопасной версии невозможно,
+      пока FastAPI не выпустит совместимое обновление.
+    issue: "https://github.com/beelzebufo98/course_project_beelzebufo98/"
+    expires_at: "2025-12-31"
+    approved_by: "beelzebufo98"
