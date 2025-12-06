@@ -1,0 +1,32 @@
+rules:
+  - id: py-unsafe-html-echo
+    languages: [python]
+    message: "Потенциально небезопасный вывод пользовательских данных в HTMLResponse"
+    severity: WARNING
+    patterns:
+      - pattern: |
+          HTMLResponse(f"...{$X}...")
+    metadata:
+      category: security
+      cwe: "CWE-79: Cross-site Scripting"
+
+  - id: py-raw-sql-fstring
+    languages: [python]
+    message: "Raw SQL с f-string — возможная SQL-инъекция"
+    severity: WARNING
+    patterns:
+      - pattern: |
+          cursor.execute(f"...{$X}...")
+    metadata:
+      category: security
+      cwe: "CWE-89: SQL Injection"
+
+  - id: py-hardcoded-secret
+    languages: [python]
+    message: "Возможный хардкод секрета/пароля в коде"
+    severity: WARNING
+    patterns:
+      - pattern-regex: "(SECRET_KEY|API_KEY|TOKEN|PASSWORD)\\s*=\\s*['\\\"][^'\\\"]+['\\\"]"
+    metadata:
+      category: security
+      cwe: "CWE-798: Use of Hard-coded Credentials"
