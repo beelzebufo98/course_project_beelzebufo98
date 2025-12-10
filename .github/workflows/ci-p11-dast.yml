@@ -17,7 +17,7 @@ concurrency:
 jobs:
   dast:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -57,7 +57,7 @@ jobs:
               -t http://localhost:8000 \
               -r zap_baseline.html \
               -J zap_baseline.json \
-              -z "-config scanner.threadPerHost=5" || true
+              || true
 
       - name: Upload DAST Evidence
         uses: actions/upload-artifact@v4
