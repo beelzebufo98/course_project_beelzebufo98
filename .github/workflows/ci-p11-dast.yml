@@ -2,6 +2,13 @@ name: P11 - DAST (ZAP baseline)
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [ master ]
+    paths:
+     - "app/**"
+     - ".github/workflows/ci-p11.yml"
+     - "EVIDENCE/P11/**"
+
 
 permissions:
   contents: read
