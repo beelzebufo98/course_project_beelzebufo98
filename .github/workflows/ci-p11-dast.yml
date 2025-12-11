@@ -35,9 +35,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run API
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TEST_DATABASE_URL: ${{ secrets.TEST_DATABASE_URL }}
         run: |
           uvicorn app.main:app --host 0.0.0.0 --port 8000 &
           timeout 30 bash -c 'until curl -sf http://localhost:8000/health; do sleep 1; done'
+
 
       - name: Ensure evidence directory
         run: mkdir -p EVIDENCE/P11
