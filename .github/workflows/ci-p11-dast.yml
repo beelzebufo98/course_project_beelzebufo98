@@ -24,45 +24,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Start FastAPI (uvicorn) in background
+      - name: Run API
         run: |
-          nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 >/tmp/uvicorn.log 2>&1 &
-
-      - name: Wait for /health endpoint
-        run: |
-          echo "Waiting for http://localhost:8000/health ..."
-          for i in {1..20}; do
-            curl -s http://localhost:8000/health && break
-            sleep 2
-          done
+          uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+          timeout 30 bash -c 'until curl -sf http://localhost:8000/health; do sleep 1; done'
 
       - name: Ensure evidence directory
         run: mkdir -p EVIDENCE/P11
 
-      - name: Run OWASP ZAP Baseline Scan
+      - name: Run ZAP Baseline
         run: |
-          docker run --rm \
-            --network host \
-            -v "$PWD/EVIDENCE/P11:/zap/wrk" \
-            ghcr.io/zaproxy/zap-stable:latest zap-baseline.py \
-              -t http://localhost:8000 \
+          docker run --rm --network host -u 0 -v "$PWD":/zap/wrk zaproxy/zap-stable \
+            zap-baseline.py \
+              -t http://localhost:8000/ \
               -r zap_baseline.html \
-              -J zap_baseline.json || true
+              -J zap_baseline.json \
+              -d || true
 
+          mv zap_baseline.* EVIDENCE/P11/ || true
 
-
-      - name: Upload DAST Evidence
+      - name: Upload P11 Evidence
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: P11_EVIDENCE
           path: EVIDENCE/P11
