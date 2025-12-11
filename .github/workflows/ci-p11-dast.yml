@@ -5,9 +5,10 @@ on:
   pull_request:
     branches: [ master ]
     paths:
-     - "app/**"
-     - ".github/workflows/ci-p11-dast.yml"
-     - "EVIDENCE/P11/**"
+    - "app/**"
+    - ".github/workflows/ci-p11-dast.yml"
+    - "EVIDENCE/P11/**"
+
 
 permissions:
   contents: read
