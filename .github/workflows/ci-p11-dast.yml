@@ -6,7 +6,7 @@ on:
     branches: [ master ]
     paths:
      - "app/**"
-     - ".github/workflows/ci-p11.yml"
+     - ".github/workflows/ci-p11-dast.yml"
      - "EVIDENCE/P11/**"
 
 permissions:
