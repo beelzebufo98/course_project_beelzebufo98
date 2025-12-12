@@ -1,0 +1,67 @@
+name: Security - P12 IaC & Container
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "Dockerfile"
+      - "compose.yaml"
+      - ".github/workflows/ci-p12-iac-container.yml"
+      - "security/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: p12-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  p12-iac-container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure evidence directory
+        run: mkdir -p EVIDENCE/P12
+
+      - name: Build Docker image
+        run: |
+          docker build -t course-project-app:local .
+
+      - name: Hadolint - Dockerfile scan
+        run: |
+          docker run --rm -i \
+            -v "$PWD:/work" \
+            hadolint/hadolint:latest \
+            hadolint Dockerfile \
+              --format json > EVIDENCE/P12/hadolint_report.json || true
+
+      - name: Checkov - IaC scan (docker-compose)
+        run: |
+          docker run --rm \
+            -v "$PWD:/work" \
+            bridgecrew/checkov:latest \
+            -f /work/compose.yaml \
+            -o json > EVIDENCE/P12/checkov_report.json || true
+
+      - name: Trivy - container image scan
+        run: |
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v "$PWD:/work" \
+            aquasec/trivy:latest image \
+            --severity HIGH,CRITICAL \
+            --format json \
+            course-project-app:local \
+            > EVIDENCE/P12/trivy_report.json || true
+
+      - name: Upload P12 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: P12_EVIDENCE
+          path: EVIDENCE/P12
