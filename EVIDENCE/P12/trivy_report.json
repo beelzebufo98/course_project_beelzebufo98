@@ -1,28 +1,28 @@
 {
   "SchemaVersion": 2,
-  "ReportID": "019b1442-5bfa-714b-80fe-0988a21833e0",
-  "CreatedAt": "2025-12-12T20:30:51.898086422Z",
-  "ArtifactID": "sha256:ccf35dff97486a327575a0d75a7219b3b056ba29e333671afe8b179a8b7f50e0",
+  "ReportID": "019b17d1-45b3-7972-abd1-dbb0e3ac66be",
+  "CreatedAt": "2025-12-13T13:05:49.491620197Z",
+  "ArtifactID": "sha256:59e9eb386e1d0d5ab8f50bd6217505ad4daca7ca9d7d27bb659d3bf4b020123b",
   "ArtifactName": "course-project-app:local",
   "ArtifactType": "container_image",
   "Metadata": {
-    "Size": 338053120,
+    "Size": 338719232,
     "OS": {
       "Family": "debian",
       "Name": "12.5"
     },
-    "ImageID": "sha256:7493c85089335a9e12d33fb878f1da3068a84c5cdaa79d5e410ce7d1c1b9f51b",
+    "ImageID": "sha256:50b14482b132e4eba480414aec3be687e64bdc87f4e3808fdf0c307264d5cdbd",
     "DiffIDs": [
       "sha256:a483da8ab3e941547542718cacd3258c6c705a63e94183c837c9bc44eb608999",
       "sha256:c8f253aef5606f6716778771171c3fdf6aa135b76a5fa8bf66ba45c12c15b540",
       "sha256:9559125c0303b960274ed767b40a1a1950c500dd9e3f5ffea9418d156b787299",
       "sha256:010a290fc3d5487d6431681165ae41aca6278b077be77a285db6888154903022",
       "sha256:067693c93cf96e1757b12c3b57a46f0ef79e2499b4729c35a608bb2e915e64ee",
-      "sha256:eea5d34408f211e74a96c60f00aed124f4a0d2e3f38e59ec00cf11fa6d3137ba",
-      "sha256:c1189482f9bd151b209bea92b47224ef21e616814f73426895efe0f203422991",
-      "sha256:fa63517b3089a228b0f42d49f67092d1e4903c02b1e1f83c0cc642a0a461919b",
-      "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49",
-      "sha256:ad8ecad501dbc72d56175946613417165d20008c73e131b14ee6281592e38899"
+      "sha256:d806409c811e8613dd69d98524e144b9380248d03db7dfef3da0120bf5922f96",
+      "sha256:3fc9655fe9596d510765ecbf2fba79bf49091be3ca946902eb04edaf7142f784",
+      "sha256:124141c16b63f36762e6348290ab0b1c13c42c902ec40e4d13aea9790c32d447",
+      "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee",
+      "sha256:c06e49550835749486e1b8d524c5af7155c2341cc3de8c4072158cfa1a9d3e68"
     ],
     "RepoTags": [
       "course-project-app:local"
@@ -30,7 +30,7 @@
     "Reference": "course-project-app:local",
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2025-12-12T20:30:21.228334179Z",
+      "created": "2025-12-13T13:05:22.327803557Z",
       "history": [
         {
           "created": "2024-03-12T01:21:01Z",
@@ -116,68 +116,68 @@
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:02Z",
+          "created": "2025-12-13T13:05:02Z",
           "created_by": "LABEL org.opencontainers.image.title=SecDev Course App org.opencontainers.image.version=0.1.0 org.opencontainers.image.authors=beelzebufo98",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:02Z",
+          "created": "2025-12-13T13:05:02Z",
           "created_by": "ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:02Z",
+          "created": "2025-12-13T13:05:02Z",
           "created_by": "WORKDIR /app",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-12-12T20:30:02Z",
+          "created": "2025-12-13T13:05:02Z",
           "created_by": "RUN /bin/sh -c groupadd -r app \u0026\u0026 useradd -r -g app app # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-12-12T20:30:11Z",
+          "created": "2025-12-13T13:05:12Z",
           "created_by": "COPY /wheels /wheels # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "RUN /bin/sh -c pip install --no-cache-dir /wheels/* \u0026\u0026 rm -rf /wheels # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "COPY . . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "HEALTHCHECK \u0026{[\"CMD-SHELL\" \"python -c \\\"import http.client; conn=http.client.HTTPConnection('127.0.0.1',8000,timeout=2); conn.request('GET','/health'); exit(0) if conn.getresponse().status==200 else exit(1)\\\"\"] \"30s\" \"3s\" \"10s\" \"0s\" '\\x03'}",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "EXPOSE map[8000/tcp:{}]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "USER app",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "ENTRYPOINT [\"uvicorn\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2025-12-12T20:30:21Z",
+          "created": "2025-12-13T13:05:22Z",
           "created_by": "CMD [\"app.main:app\" \"--host\" \"0.0.0.0\" \"--port\" \"8000\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -192,11 +192,11 @@
           "sha256:9559125c0303b960274ed767b40a1a1950c500dd9e3f5ffea9418d156b787299",
           "sha256:010a290fc3d5487d6431681165ae41aca6278b077be77a285db6888154903022",
           "sha256:067693c93cf96e1757b12c3b57a46f0ef79e2499b4729c35a608bb2e915e64ee",
-          "sha256:eea5d34408f211e74a96c60f00aed124f4a0d2e3f38e59ec00cf11fa6d3137ba",
-          "sha256:c1189482f9bd151b209bea92b47224ef21e616814f73426895efe0f203422991",
-          "sha256:fa63517b3089a228b0f42d49f67092d1e4903c02b1e1f83c0cc642a0a461919b",
-          "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49",
-          "sha256:ad8ecad501dbc72d56175946613417165d20008c73e131b14ee6281592e38899"
+          "sha256:d806409c811e8613dd69d98524e144b9380248d03db7dfef3da0120bf5922f96",
+          "sha256:3fc9655fe9596d510765ecbf2fba79bf49091be3ca946902eb04edaf7142f784",
+          "sha256:124141c16b63f36762e6348290ab0b1c13c42c902ec40e4d13aea9790c32d447",
+          "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee",
+          "sha256:c06e49550835749486e1b8d524c5af7155c2341cc3de8c4072158cfa1a9d3e68"
         ]
       },
       "config": {
@@ -268,23 +268,23 @@
       },
       {
         "Size": 1536,
-        "DiffID": "sha256:eea5d34408f211e74a96c60f00aed124f4a0d2e3f38e59ec00cf11fa6d3137ba"
+        "DiffID": "sha256:d806409c811e8613dd69d98524e144b9380248d03db7dfef3da0120bf5922f96"
       },
       {
         "Size": 9728,
-        "DiffID": "sha256:c1189482f9bd151b209bea92b47224ef21e616814f73426895efe0f203422991"
+        "DiffID": "sha256:3fc9655fe9596d510765ecbf2fba79bf49091be3ca946902eb04edaf7142f784"
       },
       {
         "Size": 39875072,
-        "DiffID": "sha256:fa63517b3089a228b0f42d49f67092d1e4903c02b1e1f83c0cc642a0a461919b"
+        "DiffID": "sha256:124141c16b63f36762e6348290ab0b1c13c42c902ec40e4d13aea9790c32d447"
       },
       {
         "Size": 162144256,
-        "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+        "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
       },
       {
-        "Size": 210944,
-        "DiffID": "sha256:ad8ecad501dbc72d56175946613417165d20008c73e131b14ee6281592e38899"
+        "Size": 877056,
+        "DiffID": "sha256:c06e49550835749486e1b8d524c5af7155c2341cc3de8c4072158cfa1a9d3e68"
       }
     ]
   },
@@ -8760,7 +8760,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:08e9bd53f7d9240e9734682b595b9fbd5082189764276242822f1fe5003dddd6",
+          "Fingerprint": "sha256:7644f4494d69a92f96a853248666ede6ce6539ed6fbbbfcc5589a3cf8bb8ccb6",
           "Title": "glibc: Out of bounds write in iconv may lead to remote code execution",
           "Description": "The iconv() function in the GNU C Library versions 2.39 and older may overflow the output buffer passed to it by up to 4 bytes when converting strings to the ISO-2022-CN-EXT character set, which may be used to crash an application or overwrite a neighbouring variable.",
           "Severity": "HIGH",
@@ -8801,17 +8801,9 @@
             "https://bugzilla.redhat.com/2277205",
             "https://bugzilla.redhat.com/2277206",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2273404",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277202",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277204",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277205",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277206",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33600",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602",
             "https://errata.almalinux.org/9/ALSA-2024-3339.html",
-            "https://errata.rockylinux.org/RLSA-2024:3339",
+            "https://errata.rockylinux.org/RLSA-2024:3269",
             "https://linux.oracle.com/cve/CVE-2024-2961.html",
             "https://linux.oracle.com/errata/ELSA-2024-3588.html",
             "https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html",
@@ -8856,7 +8848,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:cd836c6528e873a7a4988c15e5cee52d9db2dc375119c6b239a18a9254344078",
+          "Fingerprint": "sha256:24964a22bdff9db4c4fc3d825411cbf28a5eb9d36a0de9633031259ee321785b",
           "Title": "glibc: stack-based buffer overflow in netgroup cache",
           "Description": "nscd: Stack-based buffer overflow in netgroup cache\n\nIf the Name Service Cache Daemon's (nscd) fixed size cache is exhausted\nby client requests then a subsequent client request for netgroup data\nmay result in a stack-based buffer overflow.  This flaw was introduced\nin glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
           "Severity": "HIGH",
@@ -8889,18 +8881,16 @@
             "https://bugzilla.redhat.com/2277204",
             "https://bugzilla.redhat.com/2277205",
             "https://bugzilla.redhat.com/2277206",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2273404",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277202",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277204",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277205",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277206",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33600",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602",
             "https://errata.almalinux.org/9/ALSA-2024-3339.html",
-            "https://errata.rockylinux.org/RLSA-2024:3339",
+            "https://errata.rockylinux.org/RLSA-2024:3344",
             "https://inbox.sourceware.org/libc-alpha/cover.1713974801.git.fweimer@redhat.com/",
             "https://linux.oracle.com/cve/CVE-2024-33599.html",
             "https://linux.oracle.com/errata/ELSA-2024-3588.html",
@@ -8935,7 +8925,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:8905c54023fe863e4f6f8d313f1ce42b560bd2ec4e0568d9414df796b4a02241",
+          "Fingerprint": "sha256:7cbd167f15121b3a8dc37dcc8876d7709b1cf2d8fa1c88de9917a91d46a3b4c7",
           "Title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
           "Description": "Untrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo).",
           "Severity": "HIGH",
@@ -8967,7 +8957,7 @@
             "https://bugzilla.redhat.com/show_bug.cgi?id=2367468",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4802",
             "https://errata.almalinux.org/9/ALSA-2025-8655.html",
-            "https://errata.rockylinux.org/RLSA-2025:8655",
+            "https://errata.rockylinux.org/RLSA-2025:8686",
             "https://linux.oracle.com/cve/CVE-2025-4802.html",
             "https://linux.oracle.com/errata/ELSA-2025-8686.html",
             "https://lists.debian.org/debian-lts-announce/2025/05/msg00033.html",
@@ -9006,7 +8996,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:04aed04a016ffc6399fea7665ab06a636b1adc170b1c08b0f642f75b545f85fa",
+          "Fingerprint": "sha256:523bea92cb8bb15854ffc3f4b584327551cac48699c80b15b1e39e372207967b",
           "Title": "glibc: Out of bounds write in iconv may lead to remote code execution",
           "Description": "The iconv() function in the GNU C Library versions 2.39 and older may overflow the output buffer passed to it by up to 4 bytes when converting strings to the ISO-2022-CN-EXT character set, which may be used to crash an application or overwrite a neighbouring variable.",
           "Severity": "HIGH",
@@ -9047,17 +9037,9 @@
             "https://bugzilla.redhat.com/2277205",
             "https://bugzilla.redhat.com/2277206",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2273404",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277202",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277204",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277205",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2277206",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33600",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602",
             "https://errata.almalinux.org/9/ALSA-2024-3339.html",
-            "https://errata.rockylinux.org/RLSA-2024:3339",
+            "https://errata.rockylinux.org/RLSA-2024:3269",
             "https://linux.oracle.com/cve/CVE-2024-2961.html",
             "https://linux.oracle.com/errata/ELSA-2024-3588.html",
             "https://lists.debian.org/debian-lts-announce/2024/05/msg00001.html",
@@ -9102,7 +9084,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:679ccbb2c1cd8f2647353c9a1e1a543bec734fd663f85f4afb4085302af74759",
+          "Fingerprint": "sha256:8c824b2e5e0ef2a631f0dda411dc42047526b342638049bcb3ca9dcea11346b5",
           "Title": "glibc: stack-based buffer overflow in netgroup cache",
           "Description": "nscd: Stack-based buffer overflow in netgroup cache\n\nIf the Name Service Cache Daemon's (nscd) fixed size cache is exhausted\nby client requests then a subsequent client request for netgroup data\nmay result in a stack-based buffer overflow.  This flaw was introduced\nin glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
           "Severity": "HIGH",
@@ -9135,18 +9117,16 @@
             "https://bugzilla.redhat.com/2277204",
             "https://bugzilla.redhat.com/2277205",
             "https://bugzilla.redhat.com/2277206",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2273404",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277202",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277204",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277205",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2277206",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33599",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33600",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33601",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-33602",
             "https://errata.almalinux.org/9/ALSA-2024-3339.html",
-            "https://errata.rockylinux.org/RLSA-2024:3339",
+            "https://errata.rockylinux.org/RLSA-2024:3344",
             "https://inbox.sourceware.org/libc-alpha/cover.1713974801.git.fweimer@redhat.com/",
             "https://linux.oracle.com/cve/CVE-2024-33599.html",
             "https://linux.oracle.com/errata/ELSA-2024-3588.html",
@@ -9181,7 +9161,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:6a0a259c411d8228f9e4413cdee8005ca8090af028a2d06e4b8c4c4a6e954265",
+          "Fingerprint": "sha256:373439d109df4602c5d9fceef5f8ca4c75134d2cfe57674f50f6f7a47f45208c",
           "Title": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH",
           "Description": "Untrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo).",
           "Severity": "HIGH",
@@ -9213,7 +9193,7 @@
             "https://bugzilla.redhat.com/show_bug.cgi?id=2367468",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-4802",
             "https://errata.almalinux.org/9/ALSA-2025-8655.html",
-            "https://errata.rockylinux.org/RLSA-2025:8655",
+            "https://errata.rockylinux.org/RLSA-2025:8686",
             "https://linux.oracle.com/cve/CVE-2025-4802.html",
             "https://linux.oracle.com/errata/ELSA-2025-8686.html",
             "https://lists.debian.org/debian-lts-announce/2025/05/msg00033.html",
@@ -9253,7 +9233,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d89391438b8f98509a9e6bda71901afadeea39df54fc944a4b2cffeb5a81fd4e",
+          "Fingerprint": "sha256:736d4073d13f8c6ea1ea6e2df245b99d06accbc7bf412aeec959e0c0f1e63a33",
           "Title": "libexpat: Integer Overflow or Wraparound",
           "Description": "An issue was discovered in libexpat before 2.6.3. dtdCopy in xmlparse.c can have an integer overflow for nDefaultAtts on 32-bit platforms (where UINT_MAX equals SIZE_MAX).",
           "Severity": "CRITICAL",
@@ -9287,14 +9267,10 @@
             "https://bugzilla.redhat.com/2308615",
             "https://bugzilla.redhat.com/2308616",
             "https://bugzilla.redhat.com/2308617",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2308615",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2308616",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2308617",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492",
             "https://errata.almalinux.org/9/ALSA-2024-6754.html",
-            "https://errata.rockylinux.org/RLSA-2024:6754",
+            "https://errata.rockylinux.org/RLSA-2024:8859",
             "https://github.com/libexpat/libexpat/blob/R_2_6_3/expat/Changes",
             "https://github.com/libexpat/libexpat/issues/888",
             "https://github.com/libexpat/libexpat/pull/891",
@@ -9336,7 +9312,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:1c640333edd37d8a49eee0c251fc5dbc79fbc05d38136a5418e1729cf2721736",
+          "Fingerprint": "sha256:c63077ae35db0680ce5a0d62ce71477be2bcd3e9e676ee53e216bbc53ce8dbc3",
           "Title": "libexpat: integer overflow",
           "Description": "An issue was discovered in libexpat before 2.6.3. nextScaffoldPart in xmlparse.c can have an integer overflow for m_groupSize on 32-bit platforms (where UINT_MAX equals SIZE_MAX).",
           "Severity": "CRITICAL",
@@ -9377,7 +9353,7 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492",
             "https://errata.almalinux.org/9/ALSA-2024-6754.html",
-            "https://errata.rockylinux.org/RLSA-2024:6754",
+            "https://errata.rockylinux.org/RLSA-2024:6989",
             "https://github.com/libexpat/libexpat/blob/R_2_6_3/expat/Changes",
             "https://github.com/libexpat/libexpat/issues/889",
             "https://github.com/libexpat/libexpat/pull/892",
@@ -9414,7 +9390,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:b4baa597b6b9bb189f6b9132b1e9462bf14ec09249efded2f615a52d3eb82b68",
+          "Fingerprint": "sha256:4949c3c9b93e8feba803dc56ebe21050547235726c9de8eb1e7163fe76a30938",
           "Title": "expat: parsing large tokens can trigger a denial of service",
           "Description": "libexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.",
           "Severity": "HIGH",
@@ -9493,7 +9469,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:e2a124ae987b5c6fb743fe28d24d6aa7659b5cd472cbe8fdc395a8715bbf06b4",
+          "Fingerprint": "sha256:7de520841dde0959d8e4bc0cea671c97e0b77c99bb8ea968544f05ad9d4eb8ba",
           "Title": "libexpat: Negative Length Parsing Vulnerability in libexpat",
           "Description": "An issue was discovered in libexpat before 2.6.3. xmlparse.c does not reject a negative length for XML_ParseBuffer.",
           "Severity": "HIGH",
@@ -9541,7 +9517,7 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45491",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45492",
             "https://errata.almalinux.org/9/ALSA-2024-6754.html",
-            "https://errata.rockylinux.org/RLSA-2024:6754",
+            "https://errata.rockylinux.org/RLSA-2024:6989",
             "https://github.com/libexpat/libexpat/blob/R_2_6_3/expat/Changes",
             "https://github.com/libexpat/libexpat/issues/887",
             "https://github.com/libexpat/libexpat/pull/890",
@@ -9579,7 +9555,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:a80f856936345ccfa9dbf6d98e1ff9c7452c27608d5869c599edc2acf1bb953f",
+          "Fingerprint": "sha256:448479a5793acfdb25ac6c7af14a021539b16da5b0c0b46e6c9ada5f1e67e7f1",
           "Title": "libexpat: expat: Improper Restriction of XML Entity Expansion Depth in libexpat",
           "Description": "A stack overflow vulnerability exists in the libexpat library due to the way it handles recursive entity expansion in XML documents. When parsing an XML document with deeply nested entity references, libexpat can be forced to recurse indefinitely, exhausting the stack space and causing a crash. This issue could lead to denial of service (DoS) or, in some cases, exploitable memory corruption, depending on the environment and library usage.",
           "Severity": "HIGH",
@@ -9638,7 +9614,7 @@
             "https://bugzilla.suse.com/show_bug.cgi?id=1239618",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8176",
             "https://errata.almalinux.org/9/ALSA-2025-7444.html",
-            "https://errata.rockylinux.org/RLSA-2025:7444",
+            "https://errata.rockylinux.org/RLSA-2025:4048",
             "https://github.com/libexpat/libexpat/blob/R_2_7_0/expat/Changes#L40-L52",
             "https://github.com/libexpat/libexpat/issues/893",
             "https://gitlab.alpinelinux.org/alpine/aports/-/commit/d068c3ff36fc6f4789988a09c69b434db757db53",
@@ -9679,7 +9655,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:138a13d7560b1700672fee8134d9e2ea68b85926a52f9c0dd92f0ab614b2673a",
+          "Fingerprint": "sha256:be36bd56d8bea9a1ac75af831224a6de4afa3286ba8f94318915db675396dccf",
           "Title": "gnutls: Vulnerability in GnuTLS otherName SAN export",
           "Description": "A flaw was found in GnuTLS. A double-free vulnerability exists in GnuTLS due to incorrect ownership handling in the export logic of Subject Alternative Name (SAN) entries containing an otherName. If the type-id OID is invalid or malformed, GnuTLS will call asn1_delete_structure() on an ASN.1 node it does not own, leading to a double-free condition when the parent function or caller later attempts to free the same structure.\n\nThis vulnerability can be triggered using only public GnuTLS APIs and may result in denial of service or memory corruption, depending on allocator behavior.",
           "Severity": "HIGH",
@@ -9724,15 +9700,13 @@
             "https://bugzilla.redhat.com/2359622",
             "https://bugzilla.redhat.com/2376755",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2359620",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2359621",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2359622",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2376755",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32988",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32989",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32990",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6395",
             "https://errata.almalinux.org/9/ALSA-2025-16116.html",
-            "https://errata.rockylinux.org/RLSA-2025:16116",
+            "https://errata.rockylinux.org/RLSA-2025:17415",
             "https://linux.oracle.com/cve/CVE-2025-32988.html",
             "https://linux.oracle.com/errata/ELSA-2025-20606.html",
             "https://lists.debian.org/debian-lts-announce/2025/08/msg00005.html",
@@ -9769,7 +9743,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:612bbb1a48d6fe7d5569e49f93251834ffa197ab891c5fae6d550359ee2f30e3",
+          "Fingerprint": "sha256:221bd9e94ce2048d57ddfc586f6b00474cc9f462ba7e24e2ea49e771b961d821",
           "Title": "gnutls: Vulnerability in GnuTLS certtool template parsing",
           "Description": "A heap-buffer-overflow (off-by-one) flaw was found in the GnuTLS software in the template parsing logic within the certtool utility. When it reads certain settings from a template file, it allows an attacker to cause an out-of-bounds (OOB) NULL pointer write, resulting in memory corruption and a denial-of-service (DoS) that could potentially crash the system.",
           "Severity": "HIGH",
@@ -9814,15 +9788,13 @@
             "https://bugzilla.redhat.com/2359622",
             "https://bugzilla.redhat.com/2376755",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2359620",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2359621",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2359622",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2376755",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32988",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32989",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32990",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6395",
             "https://errata.almalinux.org/9/ALSA-2025-16116.html",
-            "https://errata.rockylinux.org/RLSA-2025:16116",
+            "https://errata.rockylinux.org/RLSA-2025:17415",
             "https://linux.oracle.com/cve/CVE-2025-32990.html",
             "https://linux.oracle.com/errata/ELSA-2025-20606.html",
             "https://lists.debian.org/debian-lts-announce/2025/08/msg00005.html",
@@ -9859,7 +9831,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:5a7928b7b4c1accb52b484d4dc1bd93bb7c6025ff8100637beee7589cde9bc38",
+          "Fingerprint": "sha256:cce41a4e9c1c10960a68f816be694de7192482def6512e9805ef5b6c635a65b9",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can cause invalid memory reads during GSS message token handling by sending message tokens with invalid length fields.",
           "Severity": "CRITICAL",
@@ -9875,7 +9847,7 @@
             "oracle-oval": 3,
             "photon": 4,
             "redhat": 2,
-            "rocky": 3,
+            "rocky": 2,
             "ubuntu": 2
           },
           "CVSS": {
@@ -9940,106 +9912,12 @@
             "https://bugzilla.redhat.com/2339300",
             "https://bugzilla.redhat.com/2339304",
             "https://bugzilla.redhat.com/2339305",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2294581",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2294676",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2301888",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318857",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318858",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318870",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318873",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318874",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318876",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318882",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318883",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318884",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318885",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318886",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318900",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318905",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318914",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318922",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318923",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318925",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318926",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318927",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2331191",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339218",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339220",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339221",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339226",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339231",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339236",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339238",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339243",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339247",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339252",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339259",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339266",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339270",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339271",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339275",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339277",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339281",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339284",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339291",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339293",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339295",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339299",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339300",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339304",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339305",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11053",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21193",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21194",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21196",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21197",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21198",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21199",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21201",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21203",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21212",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21213",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21218",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21219",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21230",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21231",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21236",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21237",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21238",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21239",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21241",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2294677",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5535",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7264",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21490",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21491",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21494",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21497",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21500",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21501",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21503",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21504",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21505",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21518",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21519",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21520",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21521",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21522",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21523",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21525",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21529",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21531",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21534",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21536",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21540",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21543",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21546",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21555",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21559",
             "https://errata.almalinux.org/9/ALSA-2025-1671.html",
-            "https://errata.rockylinux.org/RLSA-2025:1671",
+            "https://errata.rockylinux.org/RLSA-2024:5312",
             "https://github.com/krb5/krb5/commit/55fbf435edbe2e92dd8101669b1ce7144bc96fef",
             "https://linux.oracle.com/cve/CVE-2024-37371.html",
             "https://linux.oracle.com/errata/ELSA-2025-1673.html",
@@ -10079,7 +9957,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:a938bf57d9e98a13728b4d455e1f29d0e72a4366346be2e412f01d042911cad7",
+          "Fingerprint": "sha256:f37ffd2ec7a9d6f5c74b1ed2b619313d93aba0af9559ab29801fcd896bf64ecd",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can modify the plaintext Extra Count field of a confidential GSS krb5 wrap token, causing the unwrapped token to appear truncated to the application.",
           "Severity": "HIGH",
@@ -10156,7 +10034,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:edd647e8e5c73bb4d8932985368a44c8ff56314eec743585b3343c1d70b09eb6",
+          "Fingerprint": "sha256:6277652a288f6a0c02012448137ba41f90fd0b674fc87dd808046101db891eb1",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can cause invalid memory reads during GSS message token handling by sending message tokens with invalid length fields.",
           "Severity": "CRITICAL",
@@ -10172,7 +10050,7 @@
             "oracle-oval": 3,
             "photon": 4,
             "redhat": 2,
-            "rocky": 3,
+            "rocky": 2,
             "ubuntu": 2
           },
           "CVSS": {
@@ -10237,106 +10115,12 @@
             "https://bugzilla.redhat.com/2339300",
             "https://bugzilla.redhat.com/2339304",
             "https://bugzilla.redhat.com/2339305",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2294581",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2294676",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2301888",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318857",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318858",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318870",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318873",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318874",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318876",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318882",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318883",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318884",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318885",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318886",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318900",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318905",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318914",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318922",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318923",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318925",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318926",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318927",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2331191",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339218",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339220",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339221",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339226",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339231",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339236",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339238",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339243",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339247",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339252",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339259",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339266",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339270",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339271",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339275",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339277",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339281",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339284",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339291",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339293",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339295",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339299",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339300",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339304",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339305",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11053",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21193",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21194",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21196",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21197",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21198",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21199",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21201",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21203",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21212",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21213",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21218",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21219",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21230",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21231",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21236",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21237",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21238",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21239",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21241",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2294677",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5535",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7264",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21490",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21491",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21494",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21497",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21500",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21501",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21503",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21504",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21505",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21518",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21519",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21520",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21521",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21522",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21523",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21525",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21529",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21531",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21534",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21536",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21540",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21543",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21546",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21555",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21559",
             "https://errata.almalinux.org/9/ALSA-2025-1671.html",
-            "https://errata.rockylinux.org/RLSA-2025:1671",
+            "https://errata.rockylinux.org/RLSA-2024:5312",
             "https://github.com/krb5/krb5/commit/55fbf435edbe2e92dd8101669b1ce7144bc96fef",
             "https://linux.oracle.com/cve/CVE-2024-37371.html",
             "https://linux.oracle.com/errata/ELSA-2025-1673.html",
@@ -10376,7 +10160,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:367917b9966f434e8b305821a22123679854d71a8eb598464ca8ab66ae80612c",
+          "Fingerprint": "sha256:34a9457a60ec5cc3aa9d472d8839aa98d3e15ed4f15516b746ca07fbe660c0d0",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can modify the plaintext Extra Count field of a confidential GSS krb5 wrap token, causing the unwrapped token to appear truncated to the application.",
           "Severity": "HIGH",
@@ -10453,7 +10237,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:253074d7fdc2631e3188c5b078008558304c8a55c5f92b8aa47e76eac00d6dd9",
+          "Fingerprint": "sha256:01bc8c0e190b34341e4b7c076380c92e6664f40c1e77644cb530d946e1a0b195",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can cause invalid memory reads during GSS message token handling by sending message tokens with invalid length fields.",
           "Severity": "CRITICAL",
@@ -10469,7 +10253,7 @@
             "oracle-oval": 3,
             "photon": 4,
             "redhat": 2,
-            "rocky": 3,
+            "rocky": 2,
             "ubuntu": 2
           },
           "CVSS": {
@@ -10534,106 +10318,12 @@
             "https://bugzilla.redhat.com/2339300",
             "https://bugzilla.redhat.com/2339304",
             "https://bugzilla.redhat.com/2339305",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2294581",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2294676",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2301888",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318857",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318858",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318870",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318873",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318874",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318876",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318882",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318883",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318884",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318885",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318886",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318900",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318905",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318914",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318922",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318923",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318925",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318926",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318927",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2331191",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339218",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339220",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339221",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339226",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339231",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339236",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339238",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339243",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339247",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339252",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339259",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339266",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339270",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339271",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339275",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339277",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339281",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339284",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339291",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339293",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339295",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339299",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339300",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339304",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339305",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11053",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21193",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21194",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21196",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21197",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21198",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21199",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21201",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21203",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21212",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21213",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21218",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21219",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21230",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21231",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21236",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21237",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21238",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21239",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21241",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2294677",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5535",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7264",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21490",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21491",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21494",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21497",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21500",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21501",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21503",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21504",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21505",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21518",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21519",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21520",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21521",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21522",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21523",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21525",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21529",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21531",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21534",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21536",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21540",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21543",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21546",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21555",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21559",
             "https://errata.almalinux.org/9/ALSA-2025-1671.html",
-            "https://errata.rockylinux.org/RLSA-2025:1671",
+            "https://errata.rockylinux.org/RLSA-2024:5312",
             "https://github.com/krb5/krb5/commit/55fbf435edbe2e92dd8101669b1ce7144bc96fef",
             "https://linux.oracle.com/cve/CVE-2024-37371.html",
             "https://linux.oracle.com/errata/ELSA-2025-1673.html",
@@ -10673,7 +10363,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:1024d93e4ca32a5af794e5b8cf4fd66e443ca8c6d778d204c45cabc21b541c2e",
+          "Fingerprint": "sha256:5ea89b8bef5e5b6b0fc40717a94a9f9b0e1e8d602b9ffd6b678d51c9676359e6",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can modify the plaintext Extra Count field of a confidential GSS krb5 wrap token, causing the unwrapped token to appear truncated to the application.",
           "Severity": "HIGH",
@@ -10750,7 +10440,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:87701507b6de58573f7930ca4f5c095ca11fd6ab19b082ae0e0a49d893760cc7",
+          "Fingerprint": "sha256:1734db0988bfb61053822db3a8630462d2b4113627852b962b11af6e589cfff3",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can cause invalid memory reads during GSS message token handling by sending message tokens with invalid length fields.",
           "Severity": "CRITICAL",
@@ -10766,7 +10456,7 @@
             "oracle-oval": 3,
             "photon": 4,
             "redhat": 2,
-            "rocky": 3,
+            "rocky": 2,
             "ubuntu": 2
           },
           "CVSS": {
@@ -10831,106 +10521,12 @@
             "https://bugzilla.redhat.com/2339300",
             "https://bugzilla.redhat.com/2339304",
             "https://bugzilla.redhat.com/2339305",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2294581",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2294676",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2301888",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318857",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318858",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318870",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318873",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318874",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318876",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318882",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318883",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318884",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318885",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318886",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318900",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318905",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318914",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318922",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318923",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318925",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318926",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2318927",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2331191",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339218",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339220",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339221",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339226",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339231",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339236",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339238",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339243",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339247",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339252",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339259",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339266",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339270",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339271",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339275",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339277",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339281",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339284",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339291",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339293",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339295",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339299",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339300",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339304",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2339305",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11053",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21193",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21194",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21196",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21197",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21198",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21199",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21201",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21203",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21212",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21213",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21218",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21219",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21230",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21231",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21236",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21237",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21238",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21239",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21241",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2294677",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37370",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-37371",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5535",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7264",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21490",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21491",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21494",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21497",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21500",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21501",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21503",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21504",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21505",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21518",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21519",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21520",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21521",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21522",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21523",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21525",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21529",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21531",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21534",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21536",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21540",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21543",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21546",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21555",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-21559",
             "https://errata.almalinux.org/9/ALSA-2025-1671.html",
-            "https://errata.rockylinux.org/RLSA-2025:1671",
+            "https://errata.rockylinux.org/RLSA-2024:5312",
             "https://github.com/krb5/krb5/commit/55fbf435edbe2e92dd8101669b1ce7144bc96fef",
             "https://linux.oracle.com/cve/CVE-2024-37371.html",
             "https://linux.oracle.com/errata/ELSA-2025-1673.html",
@@ -10970,7 +10566,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:5ca33a6638bc9e94e3f3f1461813296bf70edb5092a7b4db6182c134c1321d0f",
+          "Fingerprint": "sha256:e3715459bc8b98807e58e82b9c89c0b6711fcc92179725445af4f74ca5438012",
           "Title": "krb5: GSS message token handling",
           "Description": "In MIT Kerberos 5 (aka krb5) before 1.21.3, an attacker can modify the plaintext Extra Count field of a confidential GSS krb5 wrap token, causing the unwrapped token to appear truncated to the application.",
           "Severity": "HIGH",
@@ -11046,7 +10642,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:1988cd4388973564e2f9d41b91e72ce8a256976666ac63e266b985352454eac1",
+          "Fingerprint": "sha256:eaafef7aff2d8239290fba4d77dbf2a497649e2fae098c5a56357164326fc074",
           "Title": "xz: XZ has a heap-use-after-free bug in threaded .xz decoder",
           "Description": "XZ Utils provide a general-purpose data-compression library plus command-line tools. In XZ Utils 5.3.3alpha to 5.8.0, the multithreaded .xz decoder in liblzma has a bug where invalid input can at least result in a crash. The effects include heap use after free and writing to an address based on the null pointer plus an offset. Applications and libraries that use the lzma_stream_decoder_mt function are affected. The bug has been fixed in XZ Utils 5.8.1, and the fix has been committed to the v5.4, v5.6, v5.8, and master branches in the xz Git repository. No new release packages will be made from the old stable branches, but a standalone patch is available that applies to all affected releases.",
           "Severity": "HIGH",
@@ -11109,7 +10705,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:9421a8ae84f571b3671fd3d8f6b76fcb4d4ebab86163fe69a2aeb38d860130ba",
+          "Fingerprint": "sha256:8148cd49a43035a886121c553218c1232566c9613ecb081d22bc4be6023dfd45",
           "Title": "linux-pam: Linux-pam directory Traversal",
           "Description": "A flaw was found in linux-pam. The module pam_namespace may use access user-controlled paths without proper protection, allowing local users to elevate their privileges to root via multiple symlink attacks and race conditions.",
           "Severity": "HIGH",
@@ -11163,9 +10759,11 @@
             "https://access.redhat.com/security/cve/CVE-2025-6020",
             "https://bugzilla.redhat.com/2372512",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2372512",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2388220",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6020",
-            "https://errata.almalinux.org/9/ALSA-2025-9526.html",
-            "https://errata.rockylinux.org/RLSA-2025:9526",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-8941",
+            "https://errata.almalinux.org/10/ALSA-2025-20181.html",
+            "https://errata.rockylinux.org/RLSA-2025:14557",
             "https://linux.oracle.com/cve/CVE-2025-6020.html",
             "https://linux.oracle.com/errata/ELSA-2025-9526.html",
             "https://lists.debian.org/debian-lts-announce/2025/09/msg00021.html",
@@ -11196,7 +10794,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:81c3e112b9edfa6173730ffebaeb7b62186565d92b84582766629df5d2debdd4",
+          "Fingerprint": "sha256:e3233cafccc880b6183ff96fc19e35c8c3d623db858479aa235f5b2feff83388",
           "Title": "linux-pam: Linux-pam directory Traversal",
           "Description": "A flaw was found in linux-pam. The module pam_namespace may use access user-controlled paths without proper protection, allowing local users to elevate their privileges to root via multiple symlink attacks and race conditions.",
           "Severity": "HIGH",
@@ -11250,9 +10848,11 @@
             "https://access.redhat.com/security/cve/CVE-2025-6020",
             "https://bugzilla.redhat.com/2372512",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2372512",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2388220",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6020",
-            "https://errata.almalinux.org/9/ALSA-2025-9526.html",
-            "https://errata.rockylinux.org/RLSA-2025:9526",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-8941",
+            "https://errata.almalinux.org/10/ALSA-2025-20181.html",
+            "https://errata.rockylinux.org/RLSA-2025:14557",
             "https://linux.oracle.com/cve/CVE-2025-6020.html",
             "https://linux.oracle.com/errata/ELSA-2025-9526.html",
             "https://lists.debian.org/debian-lts-announce/2025/09/msg00021.html",
@@ -11283,7 +10883,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:6a24a7c78679f5ace51c4c4d3f82bf81db122faa4eb91139010fcb9468f82816",
+          "Fingerprint": "sha256:46f997c48e56fdb8bf91433d4bc4addcc808ff03b02f0828874b90c586e61f9c",
           "Title": "linux-pam: Linux-pam directory Traversal",
           "Description": "A flaw was found in linux-pam. The module pam_namespace may use access user-controlled paths without proper protection, allowing local users to elevate their privileges to root via multiple symlink attacks and race conditions.",
           "Severity": "HIGH",
@@ -11337,9 +10937,11 @@
             "https://access.redhat.com/security/cve/CVE-2025-6020",
             "https://bugzilla.redhat.com/2372512",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2372512",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2388220",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6020",
-            "https://errata.almalinux.org/9/ALSA-2025-9526.html",
-            "https://errata.rockylinux.org/RLSA-2025:9526",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-8941",
+            "https://errata.almalinux.org/10/ALSA-2025-20181.html",
+            "https://errata.rockylinux.org/RLSA-2025:14557",
             "https://linux.oracle.com/cve/CVE-2025-6020.html",
             "https://linux.oracle.com/errata/ELSA-2025-9526.html",
             "https://lists.debian.org/debian-lts-announce/2025/09/msg00021.html",
@@ -11370,7 +10972,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:f406c3ce67d7bf84213eca6c67be8893ee18c1dac594c9b2c5fa28dc2673348a",
+          "Fingerprint": "sha256:7386d30e994c685722125e72764fde99a2ef7cfeabf4bc316977f191c7a477d2",
           "Title": "linux-pam: Linux-pam directory Traversal",
           "Description": "A flaw was found in linux-pam. The module pam_namespace may use access user-controlled paths without proper protection, allowing local users to elevate their privileges to root via multiple symlink attacks and race conditions.",
           "Severity": "HIGH",
@@ -11424,9 +11026,11 @@
             "https://access.redhat.com/security/cve/CVE-2025-6020",
             "https://bugzilla.redhat.com/2372512",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2372512",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2388220",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6020",
-            "https://errata.almalinux.org/9/ALSA-2025-9526.html",
-            "https://errata.rockylinux.org/RLSA-2025:9526",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-8941",
+            "https://errata.almalinux.org/10/ALSA-2025-20181.html",
+            "https://errata.rockylinux.org/RLSA-2025:14557",
             "https://linux.oracle.com/cve/CVE-2025-6020.html",
             "https://linux.oracle.com/errata/ELSA-2025-9526.html",
             "https://lists.debian.org/debian-lts-announce/2025/09/msg00021.html",
@@ -11459,7 +11063,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:f3d8bde51c18ec5630d6352b26e1ad5a15bdaf3ca281ecef99a4b13bbd2504a6",
+          "Fingerprint": "sha256:d2fbe07852b656345c3521e5e179789cf7a4b6d45d772a916e49a23858aa6faf",
           "Title": "sqlite: Integer Truncation in SQLite",
           "Description": "There exists a vulnerability in SQLite versions before 3.50.2 where the number of aggregate terms could exceed the number of columns available. This could lead to a memory corruption issue. We recommend upgrading to version 3.50.2 or above.",
           "Severity": "CRITICAL",
@@ -11502,7 +11106,7 @@
             "https://bugzilla.redhat.com/show_bug.cgi?id=2380149",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6965",
             "https://errata.almalinux.org/9/ALSA-2025-20936.html",
-            "https://errata.rockylinux.org/RLSA-2025:20936",
+            "https://errata.rockylinux.org/RLSA-2025:12010",
             "https://linux.oracle.com/cve/CVE-2025-6965.html",
             "https://linux.oracle.com/errata/ELSA-2025-20936.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2025-6965",
@@ -11534,7 +11138,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d4db2cb22fc7df8d96da6ba2abdd316c72234dc68cd733c1f6601fac5ea4c93a",
+          "Fingerprint": "sha256:dd9c1b31d07df900d3919c56246dedf2cab80dde05af6d0e7b9ff3a372d20ffa",
           "Title": "sqlite: SQLite integer overflow",
           "Description": "An integer overflow in the sqlite3KeyInfoFromExprList function in SQLite versions 3.39.2 through 3.41.1 allows an attacker with the ability to execute arbitrary SQL statements to cause a denial of service or disclose sensitive information from process memory via a crafted SELECT statement with a large number of expressions in the ORDER BY clause.",
           "Severity": "CRITICAL",
@@ -11587,7 +11191,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:c7de983c83cc2ef6090a4ba684a0ebb2582496c35bfab930c0cbac386158489b",
+          "Fingerprint": "sha256:9cc7e5afa37cde185cc25f3a94b83000691a07242dc16341abc3a048ee7500e2",
           "Title": "sqlite: heap-buffer-overflow at sessionfuzz",
           "Description": "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
           "Severity": "HIGH",
@@ -11628,7 +11232,7 @@
             "https://bugzilla.redhat.com/show_bug.cgi?id=2256194",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104",
             "https://errata.almalinux.org/9/ALSA-2024-0465.html",
-            "https://errata.rockylinux.org/RLSA-2024:0465",
+            "https://errata.rockylinux.org/RLSA-2024:0253",
             "https://linux.oracle.com/cve/CVE-2023-7104.html",
             "https://linux.oracle.com/errata/ELSA-2024-0465.html",
             "https://lists.debian.org/debian-lts-announce/2024/09/msg00050.html",
@@ -11671,7 +11275,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d7387b15f8eab08e8b7c72959dbd836a59e381936183627c084f62b06846a734",
+          "Fingerprint": "sha256:ee2aa561720255fc263e85c1047ca61532d207122d297558a2fc27f43ad5417e",
           "Title": "openssl: Possible denial of service in X.509 name checks",
           "Description": "Issue summary: Applications performing certificate name checks (e.g., TLS\nclients checking server certificates) may attempt to read an invalid memory\naddress resulting in abnormal termination of the application process.\n\nImpact summary: Abnormal termination of an application can a cause a denial of\nservice.\n\nApplications performing certificate name checks (e.g., TLS clients checking\nserver certificates) may attempt to read an invalid memory address when\ncomparing the expected name with an `otherName` subject alternative name of an\nX.509 certificate. This may result in an exception that terminates the\napplication program.\n\nNote that basic certificate chain validation (signatures, dates, ...) is not\naffected, the denial of service can occur only when the application also\nspecifies an expected DNS name, Email address or IP address.\n\nTLS servers rarely solicit client certificates, and even when they do, they\ngenerally don't perform a name check against a reference identifier (expected\nidentity), but rather extract the presented identity after checking the\ncertificate chain.  So TLS servers are generally not affected and the severity\nof the issue is Moderate.\n\nThe FIPS modules in 3.3, 3.2, 3.1 and 3.0 are not affected by this issue.",
           "Severity": "HIGH",
@@ -11748,7 +11352,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:d94d368cb7127e458c9a905e2c32e00dfd824ddd1c29ceab3fc6bf975abba05d",
+          "Fingerprint": "sha256:63cad8d7b438c3008697f919c22af6cde18c23b67cb1dfd3384bc83f1c636e97",
           "Title": "bind9: KeyTrap - Extreme CPU consumption in DNSSEC validator",
           "Description": "Certain DNSSEC aspects of the DNS protocol (in RFC 4033, 4034, 4035, 6840, and related RFCs) allow remote attackers to cause a denial of service (CPU consumption) via one or more DNSSEC responses, aka the \"KeyTrap\" issue. One of the concerns is that, when there is a zone with many DNSKEY and RRSIG records, the protocol specification implies that an algorithm must evaluate all combinations of DNSKEY and RRSIG records.",
           "Severity": "HIGH",
@@ -11790,21 +11394,15 @@
             "https://bugzilla.redhat.com/2263914",
             "https://bugzilla.redhat.com/2263917",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263896",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263909",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263911",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263914",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263917",
             "https://bugzilla.suse.com/show_bug.cgi?id=1219823",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50868",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5679",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6516",
             "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-01.html",
             "https://errata.almalinux.org/9/ALSA-2024-2551.html",
-            "https://errata.rockylinux.org/RLSA-2024:2551",
+            "https://errata.rockylinux.org/RLSA-2024:1782",
             "https://gitlab.nic.cz/knot/knot-resolver/-/releases/v5.7.1",
             "https://kb.isc.org/docs/cve-2023-50387",
             "https://linux.oracle.com/cve/CVE-2023-50387.html",
@@ -11872,7 +11470,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:0af7d902002b3aa455da20ab8e749287ef7980de9a1b8a722496944d46e4ff3f",
+          "Fingerprint": "sha256:7c76ee3145c1a78cc00b6b30bc815ac48f1e9f7e6be96045817b65f3871f6915",
           "Title": "bind9: Preparing an NSEC3 closest encloser proof can exhaust CPU resources",
           "Description": "The Closest Encloser Proof aspect of the DNS protocol (in RFC 5155 when RFC 9276 guidance is skipped) allows remote attackers to cause a denial of service (CPU consumption for SHA-1 computations) via DNSSEC responses in a random subdomain attack, aka the \"NSEC3\" issue. The RFC 5155 specification implies that an algorithm must perform thousands of iterations of a hash function in certain situations.",
           "Severity": "HIGH",
@@ -11909,22 +11507,16 @@
             "https://bugzilla.redhat.com/2263914",
             "https://bugzilla.redhat.com/2263917",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263896",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263909",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263911",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263914",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263917",
             "https://bugzilla.suse.com/show_bug.cgi?id=1219826",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50868",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5679",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6516",
             "https://datatracker.ietf.org/doc/html/rfc5155",
             "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-01.html",
             "https://errata.almalinux.org/9/ALSA-2024-2551.html",
-            "https://errata.rockylinux.org/RLSA-2024:2551",
+            "https://errata.rockylinux.org/RLSA-2024:1782",
             "https://gitlab.nic.cz/knot/knot-resolver/-/releases/v5.7.1",
             "https://kb.isc.org/docs/cve-2023-50868",
             "https://linux.oracle.com/cve/CVE-2023-50868.html",
@@ -11985,7 +11577,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:3680ea2bd25f2e9a54eba99d7fd1c7194e0d8d05f696ef6c221247e1ab97a34e",
+          "Fingerprint": "sha256:ed7b8dee4f14ae593d71ad126e2e0f4dee7d9f1f998b78e2a9edbb6195b5987c",
           "Title": "bind9: KeyTrap - Extreme CPU consumption in DNSSEC validator",
           "Description": "Certain DNSSEC aspects of the DNS protocol (in RFC 4033, 4034, 4035, 6840, and related RFCs) allow remote attackers to cause a denial of service (CPU consumption) via one or more DNSSEC responses, aka the \"KeyTrap\" issue. One of the concerns is that, when there is a zone with many DNSKEY and RRSIG records, the protocol specification implies that an algorithm must evaluate all combinations of DNSKEY and RRSIG records.",
           "Severity": "HIGH",
@@ -12027,21 +11619,15 @@
             "https://bugzilla.redhat.com/2263914",
             "https://bugzilla.redhat.com/2263917",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263896",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263909",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263911",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263914",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263917",
             "https://bugzilla.suse.com/show_bug.cgi?id=1219823",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50868",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5679",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6516",
             "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-01.html",
             "https://errata.almalinux.org/9/ALSA-2024-2551.html",
-            "https://errata.rockylinux.org/RLSA-2024:2551",
+            "https://errata.rockylinux.org/RLSA-2024:1782",
             "https://gitlab.nic.cz/knot/knot-resolver/-/releases/v5.7.1",
             "https://kb.isc.org/docs/cve-2023-50387",
             "https://linux.oracle.com/cve/CVE-2023-50387.html",
@@ -12109,7 +11695,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:1f9960b77aeb8182648139027bad26228d59f69521b58bdaef86a1c6c70c6ccb",
+          "Fingerprint": "sha256:f4f4cbaae6ec6681f893adc8d7911a7a49367b9e41eeb6e1263aa74b18a29c9f",
           "Title": "bind9: Preparing an NSEC3 closest encloser proof can exhaust CPU resources",
           "Description": "The Closest Encloser Proof aspect of the DNS protocol (in RFC 5155 when RFC 9276 guidance is skipped) allows remote attackers to cause a denial of service (CPU consumption for SHA-1 computations) via DNSSEC responses in a random subdomain attack, aka the \"NSEC3\" issue. The RFC 5155 specification implies that an algorithm must perform thousands of iterations of a hash function in certain situations.",
           "Severity": "HIGH",
@@ -12146,22 +11732,16 @@
             "https://bugzilla.redhat.com/2263914",
             "https://bugzilla.redhat.com/2263917",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263896",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263897",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263909",
-            "https://bugzilla.redhat.com/show_bug.cgi?id=2263911",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263914",
             "https://bugzilla.redhat.com/show_bug.cgi?id=2263917",
             "https://bugzilla.suse.com/show_bug.cgi?id=1219826",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4408",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50387",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-50868",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5517",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5679",
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6516",
             "https://datatracker.ietf.org/doc/html/rfc5155",
             "https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2024-01.html",
             "https://errata.almalinux.org/9/ALSA-2024-2551.html",
-            "https://errata.rockylinux.org/RLSA-2024:2551",
+            "https://errata.rockylinux.org/RLSA-2024:1782",
             "https://gitlab.nic.cz/knot/knot-resolver/-/releases/v5.7.1",
             "https://kb.isc.org/docs/cve-2023-50868",
             "https://linux.oracle.com/cve/CVE-2023-50868.html",
@@ -12225,7 +11805,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:0884a42fc2fd1294cf21868d43bbfa607d26947edaa6d74f9b48afc31d8b9d0d",
+          "Fingerprint": "sha256:9c973b81f050e6c47ef15fd81ab33c6532807c3b2f2a62717c73e81bdc965383",
           "Title": "openssl: Possible denial of service in X.509 name checks",
           "Description": "Issue summary: Applications performing certificate name checks (e.g., TLS\nclients checking server certificates) may attempt to read an invalid memory\naddress resulting in abnormal termination of the application process.\n\nImpact summary: Abnormal termination of an application can a cause a denial of\nservice.\n\nApplications performing certificate name checks (e.g., TLS clients checking\nserver certificates) may attempt to read an invalid memory address when\ncomparing the expected name with an `otherName` subject alternative name of an\nX.509 certificate. This may result in an exception that terminates the\napplication program.\n\nNote that basic certificate chain validation (signatures, dates, ...) is not\naffected, the denial of service can occur only when the application also\nspecifies an expected DNS name, Email address or IP address.\n\nTLS servers rarely solicit client certificates, and even when they do, they\ngenerally don't perform a name check against a reference identifier (expected\nidentity), but rather extract the presented identity after checking the\ncertificate chain.  So TLS servers are generally not affected and the severity\nof the issue is Moderate.\n\nThe FIPS modules in 3.3, 3.2, 3.1 and 3.0 are not affected by this issue.",
           "Severity": "HIGH",
@@ -12302,7 +11882,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:669e2bef58b24d0c94ef911b2fe632fa6e2309af1c2631bce95b8daec6c9c749",
+          "Fingerprint": "sha256:2812355b6abbafa00db5464cf1e9232da6a96917f57823f68ac56a9023eeb8e4",
           "Title": "perl: CPAN.pm does not verify TLS certificates when downloading distributions over HTTPS",
           "Description": "CPAN.pm before 2.35 does not verify TLS certificates when downloading distributions over HTTPS.",
           "Severity": "HIGH",
@@ -12341,7 +11921,7 @@
             "https://bugzilla.redhat.com/show_bug.cgi?id=2218667",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31484",
             "https://errata.almalinux.org/9/ALSA-2023-6539.html",
-            "https://errata.rockylinux.org/RLSA-2023:6539",
+            "https://errata.rockylinux.org/RLSA-2024:3094",
             "https://github.com/andk/cpanpm/commit/9c98370287f4e709924aee7c58ef21c85289a7f0 (2.35-TRIAL)",
             "https://github.com/andk/cpanpm/pull/175",
             "https://linux.oracle.com/cve/CVE-2023-31484.html",
@@ -12383,7 +11963,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:6840d6d34f030c0968457adc665e0e31de920ab169aa07d4db2bbd1b9a8a1070",
+          "Fingerprint": "sha256:4e63dadb4a91531b4617b112190bdc154efe5a11d4eb1d5e287f6acf323dfa41",
           "Title": "perl: Perl 5.34, 5.36, 5.38 and 5.40 are vulnerable to a heap buffer overflow when transliterating non-ASCII bytes",
           "Description": "A heap buffer overflow vulnerability was discovered in Perl. \n\nRelease branches 5.34, 5.36, 5.38 and 5.40 are affected, including development versions from 5.33.1 through 5.41.10.\n\nWhen there are non-ASCII bytes in the left-hand-side of the `tr` operator, `S_do_trans_invmap` can overflow the destination pointer `d`.\n\n   $ perl -e '$_ = \"\\x{FF}\" x 1000000; tr/\\xFF/\\x{100}/;' \n   Segmentation fault (core dumped)\n\nIt is believed that this vulnerability can enable Denial of Service and possibly Code Execution attacks on platforms that lack sufficient defenses.",
           "Severity": "HIGH",
@@ -12447,7 +12027,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:904d8725c370b05c49c6a4d640adc8b1323307565117591705f7e42330b6a174",
+          "Fingerprint": "sha256:baa3f1ca1e335f57a4b54390d57c07c60e51ca6da8f99299c147989efd1b9d3b",
           "Title": "zlib: integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_6",
           "Description": "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
           "Severity": "CRITICAL",
@@ -12520,7 +12100,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/cachecontrol-0.14.4.dist-info/METADATA"
         },
@@ -12535,7 +12115,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/deprecated-1.3.1.dist-info/METADATA"
         },
@@ -12550,7 +12130,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pyyaml-6.0.3.dist-info/METADATA"
         },
@@ -12565,7 +12145,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pygments-2.19.2.dist-info/METADATA"
         },
@@ -12580,7 +12160,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/sqlalchemy-2.0.45.dist-info/METADATA"
         },
@@ -12595,7 +12175,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/annotated_types-0.7.0.dist-info/METADATA"
         },
@@ -12610,7 +12190,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/anyio-4.12.0.dist-info/METADATA"
         },
@@ -12625,7 +12205,7 @@
             "LGPL-3.0-only"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA"
         },
@@ -12640,7 +12220,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/METADATA"
         },
@@ -12655,7 +12235,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/bandit-1.9.2.dist-info/METADATA"
         },
@@ -12670,7 +12250,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/black-24.8.0.dist-info/METADATA"
         },
@@ -12685,7 +12265,7 @@
             "BSD-2-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/boolean_py-5.0.dist-info/METADATA"
         },
@@ -12700,7 +12280,7 @@
             "MPL-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/certifi-2025.11.12.dist-info/METADATA"
         },
@@ -12715,7 +12295,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/cfgv-3.5.0.dist-info/METADATA"
         },
@@ -12730,7 +12310,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/charset_normalizer-3.4.4.dist-info/METADATA"
         },
@@ -12745,7 +12325,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/click-8.3.1.dist-info/METADATA"
         },
@@ -12760,7 +12340,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/coverage-7.13.0.dist-info/METADATA"
         },
@@ -12775,7 +12355,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/cyclonedx_python_lib-11.6.0.dist-info/METADATA"
         },
@@ -12790,7 +12370,7 @@
             "Python Software Foundation License"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/defusedxml-0.7.1.dist-info/METADATA"
         },
@@ -12805,7 +12385,7 @@
             "Python Software Foundation License"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/distlib-0.4.0.dist-info/METADATA"
         },
@@ -12820,7 +12400,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/fastapi-0.115.0.dist-info/METADATA"
         },
@@ -12835,7 +12415,7 @@
             "Unlicense"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/filelock-3.20.0.dist-info/METADATA"
         },
@@ -12850,7 +12430,7 @@
             "MIT AND Python-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/greenlet-3.3.0.dist-info/METADATA"
         },
@@ -12865,7 +12445,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/h11-0.16.0.dist-info/METADATA"
         },
@@ -12880,7 +12460,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/httpcore-1.0.9.dist-info/METADATA"
         },
@@ -12895,7 +12475,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/httpx-0.27.2.dist-info/METADATA"
         },
@@ -12910,7 +12490,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/identify-2.6.15.dist-info/METADATA"
         },
@@ -12925,7 +12505,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/idna-3.11.dist-info/METADATA"
         },
@@ -12940,7 +12520,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/METADATA"
         },
@@ -12955,7 +12535,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/inflect-7.3.1.dist-info/METADATA"
         },
@@ -12970,7 +12550,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/iniconfig-2.3.0.dist-info/METADATA"
         },
@@ -12985,7 +12565,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/isort-5.13.2.dist-info/METADATA"
         },
@@ -13000,7 +12580,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/METADATA"
         },
@@ -13015,7 +12595,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/jaraco.context-5.3.0.dist-info/METADATA"
         },
@@ -13030,7 +12610,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/jaraco.functools-4.0.1.dist-info/METADATA"
         },
@@ -13045,7 +12625,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/jaraco.text-3.12.1.dist-info/METADATA"
         },
@@ -13060,7 +12640,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/license_expression-30.4.4.dist-info/METADATA"
         },
@@ -13075,7 +12655,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/limits-5.6.0.dist-info/METADATA"
         },
@@ -13090,7 +12670,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/markdown_it_py-4.0.0.dist-info/METADATA"
         },
@@ -13105,7 +12685,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/mdurl-0.1.2.dist-info/METADATA"
         },
@@ -13120,7 +12700,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/more_itertools-10.3.0.dist-info/METADATA"
         },
@@ -13135,7 +12715,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/msgpack-1.1.2.dist-info/METADATA"
         },
@@ -13150,7 +12730,7 @@
             "UNKNOWN"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pkg_resources/tests/data/my-test-package_unpacked-egg/my_test_package-1.0-py3.7.egg/EGG-INFO/PKG-INFO"
         },
@@ -13165,7 +12745,7 @@
             "UNKNOWN"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pkg_resources/tests/data/my-test-package_zipped-egg/my_test_package-1.0-py3.7.egg"
         },
@@ -13180,7 +12760,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/mypy_extensions-1.1.0.dist-info/METADATA"
         },
@@ -13195,7 +12775,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/nodeenv-1.9.1.dist-info/METADATA"
         },
@@ -13210,7 +12790,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/packageurl_python-0.17.6.dist-info/METADATA"
         },
@@ -13226,7 +12806,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/packaging-24.2.dist-info/METADATA"
         },
@@ -13242,7 +12822,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/packaging-25.0.dist-info/METADATA"
         },
@@ -13257,7 +12837,7 @@
             "MPL-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pathspec-0.12.1.dist-info/METADATA"
         },
@@ -13272,7 +12852,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pip-25.3.dist-info/METADATA"
         },
@@ -13287,7 +12867,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pip_api-0.0.34.dist-info/METADATA"
         },
@@ -13302,7 +12882,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pip_requirements_parser-32.0.1.dist-info/METADATA"
         },
@@ -13317,7 +12897,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pip_audit-2.10.0.dist-info/METADATA"
         },
@@ -13332,7 +12912,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/platformdirs-4.2.2.dist-info/METADATA"
         },
@@ -13347,7 +12927,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/platformdirs-4.5.1.dist-info/METADATA"
         },
@@ -13362,7 +12942,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pluggy-1.6.0.dist-info/METADATA"
         },
@@ -13377,7 +12957,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pre_commit-3.8.0.dist-info/METADATA"
         },
@@ -13392,7 +12972,7 @@
             "LGPL-2.1-only"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/psycopg2_binary-2.9.11.dist-info/METADATA"
         },
@@ -13407,7 +12987,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/py_serializable-2.1.0.dist-info/METADATA"
         },
@@ -13422,7 +13002,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pydantic-2.12.5.dist-info/METADATA"
         },
@@ -13437,7 +13017,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pydantic_core-2.41.5.dist-info/METADATA"
         },
@@ -13452,7 +13032,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pyparsing-3.2.5.dist-info/METADATA"
         },
@@ -13467,7 +13047,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pytest-8.2.2.dist-info/METADATA"
         },
@@ -13482,7 +13062,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/pytest_cov-7.0.0.dist-info/METADATA"
         },
@@ -13497,7 +13077,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/python_dotenv-1.2.1.dist-info/METADATA"
         },
@@ -13512,7 +13092,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/requests-2.32.5.dist-info/METADATA"
         },
@@ -13527,7 +13107,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/rich-14.2.0.dist-info/METADATA"
         },
@@ -13542,7 +13122,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/ruff-0.6.9.dist-info/METADATA"
         },
@@ -13557,7 +13137,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools-80.9.0.dist-info/METADATA"
         },
@@ -13572,7 +13152,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/slowapi-0.1.9.dist-info/METADATA"
         },
@@ -13588,7 +13168,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/sniffio-1.3.1.dist-info/METADATA"
         },
@@ -13603,7 +13183,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/sortedcontainers-2.4.0.dist-info/METADATA"
         },
@@ -13618,7 +13198,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/starlette-0.38.6.dist-info/METADATA"
         },
@@ -13633,7 +13213,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/stevedore-5.6.0.dist-info/METADATA"
         },
@@ -13648,7 +13228,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/tomli-2.0.1.dist-info/METADATA"
         },
@@ -13663,7 +13243,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/tomli-2.3.0.dist-info/METADATA"
         },
@@ -13678,7 +13258,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/tomli_w-1.2.0.dist-info/METADATA"
         },
@@ -13693,7 +13273,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/typeguard-4.3.0.dist-info/METADATA"
         },
@@ -13708,7 +13288,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/typing_inspection-0.4.2.dist-info/METADATA"
         },
@@ -13723,7 +13303,7 @@
             "Python Software Foundation License"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/typing_extensions-4.12.2.dist-info/METADATA"
         },
@@ -13738,7 +13318,7 @@
             "PSF-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/typing_extensions-4.15.0.dist-info/METADATA"
         },
@@ -13753,7 +13333,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/urllib3-2.6.2.dist-info/METADATA"
         },
@@ -13768,7 +13348,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/uvicorn-0.30.5.dist-info/METADATA"
         },
@@ -13783,7 +13363,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/virtualenv-20.35.4.dist-info/METADATA"
         },
@@ -13813,7 +13393,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/wheel-0.45.1.dist-info/METADATA"
         },
@@ -13828,7 +13408,7 @@
             "text://Copyright (c) 2013-2025, Graham Dumpleton All rights reserved.  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/wrapt-2.0.1.dist-info/METADATA"
         },
@@ -13843,7 +13423,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "FilePath": "usr/local/lib/python3.11/site-packages/setuptools/_vendor/zipp-3.19.2.dist-info/METADATA"
         }
@@ -13861,7 +13441,7 @@
           "FixedVersion": "0.40.0",
           "Status": "fixed",
           "Layer": {
-            "DiffID": "sha256:9285cfb40d62f76621d46a5acc7ff4ab55af6b454ab4cbd4b7ebc7a3a79b0a49"
+            "DiffID": "sha256:3ff8adae69112ccd0d173e36fd51ff7b729e51c1dbecaffd642cd6f1f66ab7ee"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-47874",
@@ -13870,7 +13450,7 @@
             "Name": "GitHub Security Advisory pip",
             "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
           },
-          "Fingerprint": "sha256:c30b45e6b60c5c3b2c69eb22068ac315264c2f5b0f2c452cdfbaea01971b491f",
+          "Fingerprint": "sha256:1b20554a79d7491d70795c07f322776885e6ff54d3e0671b9eed9982e1be1963",
           "Title": "starlette: Starlette Denial of service (DoS) via multipart/form-data",
           "Description": "Starlette is an Asynchronous Server Gateway Interface (ASGI) framework/toolkit. Prior to version 0.40.0, Starlette treats `multipart/form-data` parts without a `filename` as text form fields and buffers those in byte strings with no size limit. This allows an attacker to upload arbitrary large form fields and cause Starlette to both slow down significantly due to excessive memory allocations and copy operations, and also consume more and more memory until the server starts swapping and grinds to a halt, or the OS terminates the server process with an OOM error. Uploading multiple such requests in parallel may be enough to render a service practically unusable, even if reasonable request size limits are enforced by a reverse proxy in front of Starlette. This Denial of service (DoS) vulnerability affects all applications built with Starlette (or FastAPI) accepting form requests. Verison 0.40.0 fixes this issue.",
           "Severity": "HIGH",
