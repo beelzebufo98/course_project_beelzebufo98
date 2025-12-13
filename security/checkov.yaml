@@ -1,5 +1,7 @@
-skip-check:
-  - CKV_DOCKER_2
-  - CKV_DOCKER_3
+quiet: false
+compact: true
+
 framework:
   - docker_compose
+
+skip-check: []

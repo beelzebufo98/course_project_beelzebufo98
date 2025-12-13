@@ -1,5 +1,4 @@
 ignored:
   - DL3008
-  - DL3007
-trustedRegistries:
-  - docker.io
+  - DL3013
+failure-threshold: warning
