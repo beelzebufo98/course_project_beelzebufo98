@@ -1,0 +1,7 @@
+quiet: false
+compact: true
+
+framework:
+  - docker_compose
+
+skip-check: []
